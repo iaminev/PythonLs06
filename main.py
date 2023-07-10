@@ -42,6 +42,11 @@ def task32():
     filtered_array = list(filter(lambda x: (x >= min_value)&(x <= max_value), my_array))
     print(f'Отфильтрованный массив: {filtered_array}')
 
+    print('Индексы элементов исходного массива:', end = ' ')
+    for x in range(len(my_array)):
+        if (my_array[x] >= min_value)&(my_array[x] <= max_value):
+            print(x, end = ', ')
+
 if __name__ == '__main__':
     task30()
     task32()
