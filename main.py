@@ -33,17 +33,14 @@ def task30():
 
     print(f'Рекурсия сработала медленнее в {(toc_2 - tic_2)/(toc_1 - tic_1):0.5f} раз')
 
-
-
-
 def task32():
     print("Задача 32.")
     my_array = create_array(20)
     print(f'Исходный массив: {my_array}')
     min_value = int(input("Введите минимальное значение(1..19): "))
     max_value = int(input("Введите максимальное значение(1..19): "))
-    filtered_array = filter(lambda x: (x >= min_value)&(x <= max_value), my_array)
-    print(f'Отфильтрованный массив: {list(filtered_array)}')
+    filtered_array = list(filter(lambda x: (x >= min_value)&(x <= max_value), my_array))
+    print(f'Отфильтрованный массив: {filtered_array}')
 
 if __name__ == '__main__':
     task30()
